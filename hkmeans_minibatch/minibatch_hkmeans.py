@@ -113,6 +113,12 @@ def main():
                         help='save directory for sorted hierarchical kmeans vectors')
     parser.add_argument('-c', '--centroid-dir', type=str, required=True,
                         help='directory to save the centroids in')
+    parser.add_argument('-hr', '--hierarchies', type=int, required=True,
+                        help='number of hierarchies to run the kmeans on')
+    parser.add_argument('-k', '--clusters', type=int, required=True,
+                        help='number of clusters for each part of the hierarchy')
+    parser.add_argument('-e', '--epochs', type=int, default=15,
+                        help='number of epochs to run the kmeans for each hierarchy')
     args = parser.parse_args()
 
     root = args.root_feature_path
@@ -120,8 +126,11 @@ def main():
     batch_size = args.batch_size
     save_dir = args.save_dir
     centroid_dir = args.centroid_dir
+    h = args.hierarchies
+    k = args.clusters
+    epochs = args.epochs
 
-    hkmeans(root, prefix, 4, 12, batch_size, 15, save_dir, 'vecs', centroid_dir)
+    hkmeans(root, prefix, h, k, batch_size, epochs, save_dir, 'vecs', centroid_dir)
 
 
 if __name__ == "__main__":

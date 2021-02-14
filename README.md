@@ -2,11 +2,11 @@
 An implementation of hierarchical kmeans that uses mini-batches for increased efficiency for large datasets.
 
 # Usage
-Have the .npy files all in one directory to do kmeans over. Here is the usage:
+Have the .npy files all in one root feature directory to do kmeans over. Here is the usage:
 
 ```
-$ python3 hkmeans_minibatch/minibatch_hkmeans.py -h
-usage: minibatch_hkmeans.py [-h] -r ROOT_FEATURE_PATH -p FEATURES_PREFIX [-b BATCH_SIZE] -s SAVE_DIR -c CENTROID_DIR
+$ python3 hkmeans_minibatch/minibatch_hkmeans.py -h     
+usage: minibatch_hkmeans.py [-h] -r ROOT_FEATURE_PATH -p FEATURES_PREFIX [-b BATCH_SIZE] -s SAVE_DIR -c CENTROID_DIR -hr HIERARCHIES -k CLUSTERS [-e EPOCHS]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -20,4 +20,12 @@ optional arguments:
                         save directory for sorted hierarchical kmeans vectors
   -c CENTROID_DIR, --centroid-dir CENTROID_DIR
                         directory to save the centroids in
+  -hr HIERARCHIES, --hierarchies HIERARCHIES
+                        number of hierarchies to run the kmeans on
+  -k CLUSTERS, --clusters CLUSTERS
+                        number of clusters for each part of the hierarchy
+  -e EPOCHS, --epochs EPOCHS
+                        number of epochs to run the kmeans for each hierarchy
 ```
+
+For optimal results have the batch size be larger than the number of vectors in each .npy file. The features prefix is the common prefix of the .npy files to kmeans over. The save directory should be an empty directory, which the program will fill with sorted vectors and delete after it is finished. The centroid directory should be an empty directory where all the centroids will be stored. Note that the centroids will be stored in separate files in the centroid directory.
