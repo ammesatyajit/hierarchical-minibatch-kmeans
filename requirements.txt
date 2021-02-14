@@ -1,0 +1,4 @@
+setuptools~=28.8.1
+numpy~=1.19.5
+tqdm~=4.46.1
+scikit-learn~=0.23.2
