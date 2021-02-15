@@ -1,11 +1,12 @@
 import setuptools
+import hkmeans_minibatch
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="hkmeans_minibatch",  # Replace with your own username
-    version="1.0.0",
+    version=hkmeans_minibatch.__version__,
     author="Satyajit Kumar",
     author_email="ammesatyajit@gmail.com",
     description="An implementation of hierarchical minibatch kmeans",
