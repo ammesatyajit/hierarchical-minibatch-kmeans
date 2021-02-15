@@ -2,6 +2,7 @@ README.rst
 setup.py
 hkmeans_minibatch/__init__.py
 hkmeans_minibatch/__main__.py
+hkmeans_minibatch/hkmeans.py
 hkmeans_minibatch.egg-info/PKG-INFO
 hkmeans_minibatch.egg-info/SOURCES.txt
 hkmeans_minibatch.egg-info/dependency_links.txt

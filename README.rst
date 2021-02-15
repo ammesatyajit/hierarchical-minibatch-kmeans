@@ -8,7 +8,7 @@ Install
 =======
 ::
 
-    pip3 install hkmeans-recursive
+    pip3 install hkmeans-minibatch
 
 Usage
 =====
