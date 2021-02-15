@@ -2,7 +2,7 @@
 An implementation of hierarchical kmeans that uses mini-batches for increased efficiency for large datasets.
 
 # Usage
-Have the .npy files all in one root feature directory to do kmeans over. Here is the usage:
+Have the .npy files all in one root feature directory to do kmeans over (they can be in subdirectories). Here is the usage:
 
 ```
 $ python3 hkmeans_minibatch/minibatch_hkmeans.py -h     
