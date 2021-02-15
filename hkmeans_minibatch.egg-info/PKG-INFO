@@ -1,6 +1,6 @@
 Metadata-Version: 1.2
 Name: hkmeans-minibatch
-Version: 1.0.1
+Version: 1.0.2
 Summary: An implementation of hierarchical minibatch kmeans
 Home-page: https://github.com/ammesatyajit/heirarchical-minibatch-kmeans
 Author: Satyajit Kumar
