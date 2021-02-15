@@ -5,8 +5,8 @@ An implementation of hierarchical kmeans that uses mini-batches for increased ef
 Have the .npy files all in one root feature directory to do kmeans over (they can be in subdirectories). Here is the usage:
 
 ```
-$ python3 hkmeans_minibatch/minibatch_hkmeans.py -h     
-usage: minibatch_hkmeans.py [-h] -r ROOT_FEATURE_PATH -p FEATURES_PREFIX [-b BATCH_SIZE] -s SAVE_DIR -c CENTROID_DIR -hr HIERARCHIES -k CLUSTERS [-e EPOCHS]
+$ python3 -m hkmeans_minibatch -h
+usage: __main__.py [-h] -r ROOT_FEATURE_PATH -p FEATURES_PREFIX [-b BATCH_SIZE] -s SAVE_DIR -c CENTROID_DIR -hr HIERARCHIES -k CLUSTERS [-e EPOCHS]
 
 optional arguments:
   -h, --help            show this help message and exit
