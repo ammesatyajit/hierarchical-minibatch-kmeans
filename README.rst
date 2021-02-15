@@ -2,9 +2,16 @@ Hierarchical Minibatch Kmeans
 =============================
 
 An implementation of hierarchical kmeans that uses mini-batches for
-increased efficiency for large datasets. # Usage Have the .npy files all
-in one root feature directory to do kmeans over (they can be in
-subdirectories). Here is the usage:
+increased efficiency for large datasets.
+
+Install
+=======
+::
+
+    pip3 install hkmeans-recursive
+
+Usage
+=====
 
 ::
 
@@ -29,7 +36,8 @@ subdirectories). Here is the usage:
       -e EPOCHS, --epochs EPOCHS
                             number of epochs to run the kmeans for each hierarchy
 
-For optimal results have the batch size be larger than the number of
+Have the .npy files all in one root feature directory to do kmeans over (they can be in
+subdirectories). For optimal results have the batch size be larger than the number of
 vectors in each .npy file. The features prefix is the common prefix of
 the .npy files to kmeans over. The save directory should be an empty
 directory, which the program will fill with sorted vectors and delete
