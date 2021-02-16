@@ -4,7 +4,7 @@ An implementation of hierarchical kmeans that uses mini-batches for increased ef
 
 # Install
 ```
-    pip3 install hkmeans-minibatch
+$ pip3 install hkmeans-minibatch
 ```
 
 # Usage
